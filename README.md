@@ -11,7 +11,7 @@ Personal collection of leetcode problems solved with python.
 |9|Palindrome Number|Easy|1.转换为字符串<br>2.反转全部/一半|[L9](https://github.com/irasin/python_leetcode/blob/master/leetcode/0009_Palindrome%20Number.py)|
 |15|3Sum|Medium|1.暴力穷举<br>2.双指针<br>2.计数加双循环|[L15](https://github.com/irasin/python_leetcode/blob/master/leetcode/0015_3Sum.py)|
 |16|3Sum Closest|Medium|1.暴力穷举<br>2.双指针|[L16](https://github.com/irasin/python_leetcode/blob/master/leetcode/0016_3Sum%20Closest.py)|
-|17|Letter Combinations of a Phone Number|Medium|1.回溯算法|[L17](https://github.com/irasin/python_leetcode/blob/master/leetcode/0017_ Letter Combinations of a Phone Number.py)|
+|17|Letter Combinations of a Phone Number|Medium|1.回溯算法|[L17](https://github.com/irasin/python_leetcode/blob/master/leetcode/0017_Letter%20Combinations%20of%20a%20Phone%20Number.py)|
 |18|4Sum|Medium|1.暴力穷举<br>2.双指针|[L18](https://github.com/irasin/python_leetcode/blob/master/leetcode/0018_4Sum.py)|
 |41|First Missing Positive|Hard|原地哈希|[L41](https://github.com/irasin/python_leetcode/blob/master/leetcode/0041_First%20Missing%20Positive.py)|
 |136|Single Number|Easy|1.位运算：异或|[L136](https://github.com/irasin/python_leetcode/blob/master/leetcode/0136_Single%20Number.py)|
