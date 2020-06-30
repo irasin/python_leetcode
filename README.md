@@ -24,7 +24,7 @@ Personal collection of leetcode problems solved with python.
 
 |Index/问题编号|Problem Name/问题名|Difficult/难易度|Solution Core/解法核心|Link/链接|
 |---|---|---|---|---|
-|9|剑指 Offer 09 用两个栈实现队列|Easy|栈和队列|[JZ9](https://github.com/irasin/python_leetcode/blob/master/%E5%89%91%E6%8C%87Offer/%E5%89%91%E6%8C%87%20Offer%2009%20%E7%94%A8%E4%B8%A4%E4%B8%AA%E6%A0%88%E5%AE%9E%E7%8E%B0%E9%98%9F%E5%88%97.py)|
+|9|用两个栈实现队列|Easy|栈和队列|[JZ9](https://github.com/irasin/python_leetcode/blob/master/%E5%89%91%E6%8C%87Offer/%E5%89%91%E6%8C%87%20Offer%2009%20%E7%94%A8%E4%B8%A4%E4%B8%AA%E6%A0%88%E5%AE%9E%E7%8E%B0%E9%98%9F%E5%88%97.py)|
 
 
 
