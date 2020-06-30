@@ -73,17 +73,26 @@ XY  Z  X' Y'
 
 
 这个时候，考虑X'，Y'什么情况为真呢？根据真伪表的计算方式
+比如，看Y'和（X, Y, Z)的关系
 Y' = ~X & Y & ~Z  |  ~X & ~Y & Z = ~X &(Y & ~Z | ~Y & Z) = ~X & (Y^Z)
 X' = X & ~Y & ~Z  |  ~X & Y & Z 
 
 也就是说
 每输入一个Z，可以做如下的迁移，计算方式如上
-X，Y -》 X，Y‘
+X，Y = X，Y‘
 注意这里X，Y要同时更新
 
 因为这样的话就是用更新过的Y来更新X，这样的话X的更新式需要变化
+至于怎么变呢，其实只要看上述状态转移表中X'和（X Y' Z')的关系即可
+可以发现
+X = X & X |
+
+
+
 
 最后，输出Y即可
+
+
 """
 
 # 时间复杂度O(N)，空间复杂度O(1)
@@ -96,4 +105,32 @@ class Solution:
         return Y
 
 
+Solution().singleNumber([2, 2, -3, 2])
+
+"""
+注意这里X，Y要同时更新
+
+因为这样的话就是用更新过的Y来更新X，这样的话X的更新式需要变化
+至于怎么变呢，其实只要看上述状态转移表中X'和（X Y' Z')的关系即可
+
+X  Z  X' Y'
+0  0  0  0
+0  0  0  1
+1  0  1  0
+0  1  0  1
+0  1  1  0
+1  1  0  0
+
+X = X & ~Y' & ~Z | ~X & ~Y' & Z = ~Y' & (X & ~Z | ~X & Z) = ~Y' & (X ^ Z)
+
+代码如下
+"""
+class Solution:
+    def singleNumber(self, nums):
+        X, Y = 0, 0
+        for Z in nums:
+            Y = ~X & (Y ^ Z)
+            X = ~Y & (X ^ Z)
+        return Y
+    
 Solution().singleNumber([2, 2, -3, 2])
