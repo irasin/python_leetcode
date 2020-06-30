@@ -46,12 +46,13 @@ class Solution:
         if not head: # 如果head为空，直接return
             return
         current = head # 初始化current
-        visited = [current.val] # 初始化visited
+        visited = set()  # 初始化visited
+        visited.add(current.val)
         while current.next: # 当current下一个节点不为空
             if current.next.val in visited: # 判断下一个节点的val是否在visited中
                 current.next = current.next.next # 如果在，则移除下一个节点，
             else:
-                visited.append(current.next.val) # 如果不在，记录下一个节点的val
+                visited.add(current.next.val) # 如果不在，记录下一个节点的val
                 current = current.next # 移动current到下一个节点
         return head
         
