@@ -41,18 +41,18 @@ Solution().threeSum([-1, 0, 1, 2, -1, -4])
 
 
 # --------------------------------------------------------------------------------------
-## 三指针问题（外部for循环，内部while双指针）
+## 双指针问题（外部for循环，内部while双指针）
 ## 首先排序是O(nlogn)的，值得一做并且是双指针的必要条件
 ## 从nums的第i个元素起通过for遍历，先使得j, k = i + 1, len(nums) - 1
 ## while j < k，j和k分别向左和向右移动，如果满足nums[i] + nums[j] + nums[k] == 0则输出
 ## 当这个和比0大时，k向左，比0小时，j向右，直至j == k
-## 这是一个基础的三指针问题，然而有很多可以优化的点
+## 这是一个基础的双指针问题，然而有很多可以优化的点
 ## 1.去重j, k，每次移动i，j，k，我们都应当考虑，nums[i], nums[j], nums[k]的值是否改变
-## 2.剪枝i
-##       2.1当nums[i] > 0时，nums[i]  + nums[j] + nums[k] > 0必然成立，因此可以break
-##       2.2当i > 0且nums[i] == nums[i - 1]时，此时求得的关于i，j，k的值和i - 1的情况相同，因此可以continue
-##       2.3当nums[i] + nums[k - 1] + nums[k] < 0，此时再怎么移动j也不会达到和为0，因此可以continue
-##       2.4当nums[i] + num[j] + nums[j + 1] > 0，此时i右边任意3数的和必定大于0，因此可以break
+## 2.去重i，当i > 0且nums[i] == nums[i - 1]时，此时求得的关于i，j，k的值和i - 1的情况相同，因此可以continue
+## 3.剪枝      
+##       3.1当nums[i] > 0时，nums[i]  + nums[j] + nums[k] > 0必然成立，因此可以break
+##       3.2当nums[i] + nums[k - 1] + nums[k] < 0，此时再怎么移动j也不会达到和为0，因此可以continue
+##       3.3当nums[i] + num[j] + nums[j + 1] > 0，此时i右边任意3数的和必定大于0，因此可以break
 
 ## 时间复杂度 O(n^2)，空间复杂度O(1)
 class Solution:
@@ -62,18 +62,18 @@ class Solution:
         nums.sort() # 排序
         
         for i in range(n - 2): # 第一重指针用for循环
-            if i > 0 and nums[i] == nums[i - 1]: # 剪枝2.1
+            if i > 0 and nums[i] == nums[i - 1]: # 去重i
                 continue
 
-            if nums[i] > 0: # 剪枝2.2
+            if nums[i] > 0: # 剪枝3.1
                 break
 
             k = n - 1
-            if nums[i] + nums[k - 1] + nums[k] < 0: # 剪枝2.3
+            if nums[i] + nums[k - 1] + nums[k] < 0: # 剪枝3.2
                 continue
             
             j = i + 1 
-            if nums[i] + nums[j] + nums[j + 1] > 0: # 剪枝2.4
+            if nums[i] + nums[j] + nums[j + 1] > 0: # 剪枝3.3
                 break
 
 
@@ -114,7 +114,7 @@ Solution().threeSum([-4, -2, 1, -5, -4, -4, 4, -2, 0, 4, 0, -2, 3, 1, -5, 0])
 ## 其次，如果 k > j，则k的次数也要1次以上，如果k == j，则此时j的次数要2次以上（这包含了i==j==k）的情况）
 ## 最后，作为优化，我们可以添加一些剪枝操作，如i > 0 或 k < j的话就直接break
 
-## Counter版本花的时间比三指针还长
+## Counter版本花的时间比双指针还长
 
 # from collections import Counter
 

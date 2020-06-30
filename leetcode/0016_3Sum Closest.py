@@ -39,7 +39,7 @@ class Solution:
 Solution().threeSumClosest([-1, 2, 1, -4], 1)
 Solution().threeSumClosest([-1, 1,3, 2,1, -4], 5)
 
-## 三指针（外部for循环，内部while循环）
+## 双指针（外部for循环，内部while循环）
 ## 和第15题类似，但判定条件不同，需要注意
 ## 作为优化部分，去重剪枝都是可以添加的
 
