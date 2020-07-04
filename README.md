@@ -13,6 +13,7 @@ Personal collection of leetcode problems solved with python.
 |16|3Sum Closest|Medium|1.暴力穷举<br>2.双指针|[L16](https://github.com/irasin/python_leetcode/blob/master/leetcode/0016_3Sum%20Closest.py)|
 |17|Letter Combinations of a Phone Number|Medium|1.回溯算法|[L17](https://github.com/irasin/python_leetcode/blob/master/leetcode/0017_Letter%20Combinations%20of%20a%20Phone%20Number.py)|
 |18|4Sum|Medium|1.暴力穷举<br>2.双指针|[L18](https://github.com/irasin/python_leetcode/blob/master/leetcode/0018_4Sum.py)|
+|32|Longest Valid Parentheses|hard|1暴力穷举<br>2.动态规划<br>3.栈|[L32](https://github.com/irasin/python_leetcode/blob/master/leetcode/0032_Longest%20Valid%20Parentheses.py)|
 |41|First Missing Positive|Hard|原地哈希|[L41](https://github.com/irasin/python_leetcode/blob/master/leetcode/0041_First%20Missing%20Positive.py)|
 |0108|Convert Sorted Array to Binary Search Tree|Easy|1.二叉搜索树<br>2.中序遍历|[L108](https://github.com/irasin/python_leetcode/blob/master/leetcode/0108_Convert%20Sorted%20Array%20to%20Binary%20Search%20Tree.py)|
 |136|Single Number|Easy|1.位运算：异或|[L136](https://github.com/irasin/python_leetcode/blob/master/leetcode/0136_Single%20Number.py)|
